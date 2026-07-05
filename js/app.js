@@ -25,22 +25,23 @@ form.addEventListener("click", function(event) {
     message.style.color = "#0d9367";
   }
 });
+document.addEventListener("DOMContentLoaded", function() {
+  let darkBtn = document.getElementById("dark-mode-btn");
 
-let darkBtn = document.getElementById("dark-mode-btn");
-
-if (localStorage.getItem("darkMode") === "enabled") {
-  document.body.classList.add("dark-mode");
-  darkBtn.textContent = "Light Mode";
-}
-
-darkBtn.addEventListener("click", function() {
-  document.body.classList.toggle("dark-mode");
-
-  if (document.body.classList.contains("dark-mode")) {
+  if (localStorage.getItem("darkMode") === "enabled") {
+    document.body.classList.add("dark-mode");
     darkBtn.textContent = "Light Mode";
-    localStorage.setItem("darkMode", "enabled");
-  }else {
-    darkBtn.textContent = "Dark Mode";
-    localStorage.setItem("darkMode", "disabled");
   }
+
+  darkBtn.addEventListener("click", function() {
+    document.body.classList.toggle("dark-mode");
+
+    if (document.body.classList.contains("dark-mode")) {
+      darkBtn.textContent = "Light Mode";
+      localStorage.setItem("darkMode", "enabled");
+    }else {
+      darkBtn.textContent = "Dark Mode";
+      localStorage.setItem("darkMode", "disabled");
+    }
+  });
 });
