@@ -183,7 +183,7 @@ img {
 
 @keyframes fadeInUp {
   0%   { box-shadow: 0 0 0 0 rgba(4, 60, 9, 0.4); }
-  70%  { box-shadow: 0 0 0 10px rgba(4, 60, 9, 0); }
+  70%  { box-shadow: 0 0 0 30px rgba(4, 60, 9, 0); }
   100% {box-shadow: 0 0 0 0 rgba(4, 60, 9, 0);}
 }
 
