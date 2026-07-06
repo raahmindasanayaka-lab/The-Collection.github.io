@@ -45,3 +45,19 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 });
+
+async function getExchangeRate() {
+  try {
+    let response = await fetch("https://api.exchangerate-api.com/v4/latest/USD");
+    let data = await response.json();
+
+    let lkrRate = data.rates.LKR;
+    let rateDisplay = document.getElementById("rate-display");
+    rateDisplay.textContent = "1 USD = Rs." + lkrRate.toFixed(2) + "LKR (live rate)";
+    rateDisplay.style.color = "#0d9367";
+  }catch (error) {
+    document.getElementById("rate-display").textContent = "Could not load exchange rate.";
+  }
+}
+
+getExchangeRate();
