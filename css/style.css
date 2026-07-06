@@ -181,7 +181,7 @@ img {
 .card:nth-child(4) {animation-delay: 0.3s; }
 .card:nth-child(5) {animation-delay: 0.4s; }
 
-@keyframes fadeInUp {
+@keyframes pulse {
   0%   { box-shadow: 0 0 0 0 rgba(4, 60, 9, 0.4); }
   70%  { box-shadow: 0 0 0 30px rgba(4, 60, 9, 0); }
   100% {box-shadow: 0 0 0 0 rgba(4, 60, 9, 0);}
