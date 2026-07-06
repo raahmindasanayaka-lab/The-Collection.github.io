@@ -8,7 +8,7 @@ const products = [
 
 const grid = document.getElementById("product-grid");
 
-const cardHTML = product.map(({ name, price, color, featured }) => {
+const cardHTML = products.map(({ name, price, color, featured }) => {
 
   const cardClass = featured ? "product-card featured" : "product-card";
   return `
